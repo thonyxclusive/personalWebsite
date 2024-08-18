@@ -97,16 +97,16 @@
                     <div class="section-tittle mb-35">
                       <h2>About</h2>
                     </div>
-                    <p>As a Leeds-based Junior Software Engineer, I am proficient in JavaScript, C++, HTML, and CSS. 
+                    <p style="text-align: justify;">As a Leeds-based Junior Software Engineer, I am proficient in JavaScript, Python, Next.Js, Material UI, C++, HTML, and CSS. 
                         I pride myself on my strong self-learning and problem-solving skills, which have been crucial in my development as a software engineer.
                          Additionally, I have a proven track record in client relationship management, sales, and marketing, which allows me to bridge the gap between technical and business aspects effectively.</p>
 
-                    <p> I am particularly excited about the potential of integrating AI into software engineering.
+                    <p style="text-align: justify;"> I am particularly excited about the potential of integrating AI into software engineering.
                          The advancements in AI are revolutionizing the field, offering unprecedented opportunities to enhance the efficiency, accuracy, and innovation of software solutions. 
                          The ability of AI to automate repetitive tasks, provide intelligent insights, and create personalized user experiences is transforming the way we approach software development.
                           I am eager to be at the forefront of this transformation, leveraging AI to push the boundaries of what is possible and deliver cutting-edge solutions that meet the evolving needs of clients and users.</p>
                     <div class="col-xl-2 col-lg-3 col-md-4">
-                        <a href="assets/img/ANTHONY.C.OBI (CV-Eng).pdf" class="btn white-btn f-right sm-left">Download CV</a>
+                        <a href="assets/img/C. A. OBI.pdf" class="btn white-btn f-right sm-left">Download CV</a>
                     </div>
                   </div>
                 </div>
@@ -143,44 +143,64 @@
                             <!-- contact-form -->
                             <div class="form-wrapper">
                                 <div class="row ">
-                                    <div class="col-xl-12">
-                                        <div class="small-tittle mb-30">
-                                            <h4>Contact Me</h4>
-                                        </div>
+                                  <div class="col-xl-12">
+                                    <div class="small-tittle mb-30">
+                                      <h4>Contact Me</h4>
                                     </div>
+                                  </div>
                                 </div>
                                 <form id="contact-form" action="#" method="POST">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="form-box user-icon mb-25">
-                                                <input type="text" name="name" placeholder="Your name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="form-box email-icon mb-25">
-                                                <input type="text" name="email" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6">
-                                            <div class="form-box email-icon mb-25">
-                                                <input type="text" name="email" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="form-box message-icon mb-25">
-                                                <textarea name="message" id="message" placeholder="Message"></textarea>
-                                            </div>
-                                            <div class="submit-info">
-                                                <button class="submit-btn2" type="submit">Send Message</button>
-                                            </div>
-                                        </div>
+                                  <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                      <div class="form-box user-icon mb-25">
+                                        <input type="text" name="name" placeholder="Your name" id="name">
+                                      </div>
                                     </div>
+                                    <div class="col-lg-4 col-md-6">
+                                      <div class="form-box email-icon mb-25">
+                                        <input type="email" name="email" placeholder="Email" id="email">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                      <div class="form-box email-icon mb-25">
+                                        <input type="text" name="subject" placeholder="Subject" id="subject">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                      <div class="form-box message-icon mb-25">
+                                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                                      </div>
+                                      <div class="submit-info">
+                                        <button class="submit-btn2" type="submit">Send Message</button>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </form> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                              </div>
+        
+                              <script>
+                                document.getElementById("contact-form").addEventListener("submit", function(event) {
+                                  // Prevent the default form submission
+                                  event.preventDefault();
+                                  
+                                  // Get the form field values
+                                  var name = document.getElementById("name").value.trim();
+                                  var email = document.getElementById("email").value.trim();
+                                  var subject = document.getElementById("subject").value.trim();
+                                  var message = document.getElementById("message").value.trim();
+                                  
+                                  // Basic validation
+                                  if (name === "" || email === "" || subject === "" || message === "") {
+                                    alert("Please fill out all fields.");
+                                    return;
+                                  }
+                                  
+                                  // If validation passes, show an alert (or process the form)
+                                  alert("Message sent successfully!");
+                                  // Clear the form after successful submission
+                                  document.getElementById("contact-form").reset();
+                                });
+                              </script>
             <!-- footer-bottom area -->
             <div class="footer-bottom-area">
                 <div class="container">
